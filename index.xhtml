@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+			"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+				xmlns:xi="http://www.w3.org/2001/XInclude">
+<head>
+	<title>Ma_Sys.ma IAL 1.6.0</title>
+	<link rel="icon" type="image/png" sizes="64x64" href="data:image/png;base64,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"/>
+
+<!-- ***************************************************************************
+********************************************************************************
+********************************************************************************
+******                                                                    ****** 
+******                                                                    ****** 
+******        S T Y L E S H E E T                                         ****** 
+******                                                                    ****** 
+******                                                                    ****** 
+********************************************************************************
+********************************************************************************
+**************************************************************************** -->
+
+	<style type="text/css">
+		/* <![CDATA[ */
+		*           { font-family: "PT Mono", "Terminus", monospace;
+				margin: 0; padding: 0; }
+		html        { background-color: #000000; color: #e5e5e5; }
+		body        { background-color: #0000cd; }
+		h1, #logo   { display: table-column; float: left; }
+		h1, h2      { color: #ffffff; }
+		hr          { visibility: hidden; clear: both; }
+		h2          { float: left; font-size: 100%;
+				padding-bottom: 0.5em; padding-left: 2ex;
+				color: #00ffff; }
+		input       { clear: both; width: 100%;
+				border: 1px solid #e5e5e5; font-weight: bold;
+				color: #ffff00; background-color: #000000;
+				margin-bottom: 0.5em; }
+		input:focus { border-color: #ffff00; }
+
+		a:link, a:visited, .search_config a.regular:link,
+		.search_config a.regular:visited,
+		.search_config a.regular:active
+		            { color: #e5e5e5; }
+
+		.box        { margin-top: 1em; margin-left: 2ex;
+				padding-top: 0.5em; padding-bottom: 0.5em;
+				border: 4px double #808080; width: 77ex;
+				min-height: 25.3em; float: left; }
+		.box ul, .box form
+		            { padding-left: 2ex; padding-right: 2ex; }
+
+		.box ul     { float: left; list-style: none; }
+		.box hr     { visibility: visible;
+				border-top: 1px solid #808080;
+				margin-bottom: 0.5em; }
+
+		.search_config
+		            { margin-left: 2ex; float: left;
+				margin-bottom: 0.5em; }
+
+		.search_config a:link, .search_config a:visited,
+		.search_config a:active
+		            { text-decoration: none; color: #000000; }
+
+		.checkbox_enable, .checkbox_disable
+		            { padding-left: 0.5ex; padding-right: 0.5ex;
+				font-weight: bold; }
+		.checkbox_enable
+		            { background-color: #00cdcd; }
+		.checkbox_disable
+		            { background-color: #e5e5e5; }
+
+		a.checkbox_disable:link, a.checkbox_disable:visited,
+		a.checkbox_disable:active
+		            { color: #4d4d4d; }
+
+		a.selected:link, a.selected:visited, a.selected:active
+		            { color: #ffff00; }
+
+		a.selected:after
+		            { content: "<"; }
+		#logo       { padding-left: 4ex; }
+		#header     { padding-left: 4ex; margin-bottom: 1em; }
+		#header h1  { padding-right: 0; padding-left: 0; }
+		#header > * { padding-top: 0.5em; padding-bottom: 0.5em;
+				padding-right: 4ex; }
+		#first      { padding-left: 0; padding-right: 0; float: left;
+				width: 25ex; }
+		#first input
+		            { margin-top: 0.7em; margin-bottom: 0.7em; }
+
+		#mode       { font-weight: bold; }
+		#all_boxes  { background-color: #000000; }
+
+		/* TODO DOES NOT WORK? */
+		#first input:before
+		            { content: "i: "; }
+		/* ]]> */
+	</style>
+
+<!-- ***************************************************************************
+********************************************************************************
+********************************************************************************
+******                                                                    ****** 
+******                                                                    ****** 
+******        S C R I P T   F U N C T I O N S                             ****** 
+******                                                                    ****** 
+******                                                                    ****** 
+********************************************************************************
+********************************************************************************
+**************************************************************************** -->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+
+var ial_db = {
+	doc: [ ],
+	abx: [ ]
+};
+
+function ial_add_data(list) {
+	for (var i in list) {
+		if (ial_db[list[i].box] != undefined &&
+					ial_db[list[i].box] instanceof Array)
+			ial_db[list[i].box].push(list[i]);
+		else
+			alert("Invalid entry: " + JSON.stringify(list[i]));
+	}
+}
+
+function ial_keypress_all(event) {
+	if (event == null)
+		return;
+
+	var mode = document.getElementById("mode").innerHTML;
+
+	if (mode == "INSERT" && event.keyCode == 27 /* Escape */) {
+		ial_normal_mode();
+	} else if (mode == "NORMAL") {
+		switch(event.keyCode) {
+		case 13: // ENTER
+			var sl = document.querySelectorAll("a.selected")[0];
+			if (sl != undefined)
+				window.open(sl.getAttribute("href"));
+			break;
+		case 65: // 'a' -- docs
+			document.getElementById("in_search_doc").focus();
+			break;
+		case 72: // 'h' -- prev box
+			ial_select_different_box(e => e.previousElementSibling);
+			break;
+		case 73: // 'i' -- google
+			document.getElementById("google").focus();
+			break;
+		case 74: // 'j' -- next link
+			ial_select_different_element(e => e.nextElementSibling);
+			break;
+		case 75: // 'k' -- prev link
+			ial_select_different_element(
+						e => e.previousElementSibling);
+			break;
+		case 76: // 'l' -- next box
+			ial_select_different_box(e => e.nextElementSibling);
+			break;
+		case 79: // 'o' -- archivebox
+			document.getElementById("in_search_abx").focus();
+			break;
+		default:
+			return;
+		}
+		event.preventDefault(); // else-else
+	}
+}
+
+function ial_select_different_element(func) {
+	var sl = document.querySelectorAll("a.selected")[0];
+	if (sl != undefined) {
+		var par = sl.parentElement;
+		if (par != undefined) {
+			var nel = func(par);
+			if (nel != undefined) {
+				nel = nel.getElementsByTagName("a")[0];
+				if (nel != undefined) {
+					sl.removeAttribute("class");
+					nel.setAttribute("class", "selected");
+				}
+			}
+		}
+	}
+}
+
+function ial_select_different_box(func) {
+	var sl = document.querySelectorAll("a.selected")[0];
+	if (sl != undefined) {
+		var par = sl;
+		// div.box(ppp) > ul(pp) > li(p) > a
+		for (var i = 0; i < 3 && par != undefined; i++)
+			par = par.parentElement;
+
+		if (par != undefined) {
+			var nel = par;
+			var chd;
+			// loop to permit passing over boxes w/o links
+			do {
+				nel = func(nel);
+				if (nel != undefined)
+					chd = nel.querySelectorAll("ul > li > a"
+									)[0];
+			} while (nel != undefined && chd == undefined);
+			if (chd != undefined) {	
+				sl.removeAttribute("class");
+				chd.setAttribute("class", "selected");
+			}
+		}
+	}
+}
+
+function ial_ready() {
+	for (var box in ial_db) {
+		var unique_ids = {};
+		for (var j in ial_db[box])
+			unique_ids[ial_db[box][j].id] = true;
+
+		// enable and disable buttons
+		var edb = document.getElementById("enable_" + box);
+		edb.innerHTML = "";
+		for (var id in unique_ids)
+			edb.innerHTML +=
+				"<a href=\"javascript:ial_toggle('" +
+				box + "', '" + id + "');\" class=\"" +
+				"checkbox_enable\" id=\"toggle_" + box + "_" +
+				id + "\">" + id + "</a>\n";
+
+		ial_update_search(box);
+	}
+	document.getElementById("mode").innerHTML = "NORMAL";
+	document.addEventListener("keydown", ial_keypress_all, true);
+}
+
+function ial_toggle(box, id) {
+	var toggle = document.getElementById("toggle_" + box + "_" + id);
+	if (toggle.getAttribute("class") == "checkbox_enable")
+		toggle.setAttribute("class", "checkbox_disable");
+	else
+		toggle.setAttribute("class", "checkbox_enable");
+
+	ial_update_search(box);
+	return void(0);
+}
+
+function ial_update_search(box) {
+	var query = document.getElementById("in_search_" + box).value;
+	var limit = 100;
+
+	var ids_enabled = {};
+	var edb = document.getElementById("enable_" + box).firstElementChild;
+	while (edb != undefined) {
+		if (edb.getAttribute("class") == "checkbox_enable")
+			ids_enabled[edb.textContent] = true;
+		edb = edb.nextElementSibling;
+	}
+
+	var match_list = [ [], [] ];
+
+	// TODO Z IF PERFORMANCE IS NEEDED GROUP THE DB BY "id"
+	for (var i in ial_db[box]) {
+		if (ids_enabled[ial_db[box][i].id] == true) {
+			var match = false;
+			for (var p in ial_db[box][i].primary) {
+				if (ial_db[box][i].primary[p].
+							startsWith(query)) {
+					match_list[0].push(ial_db[box][i]);
+					match = true;
+					break;
+				}
+			}
+			if (!match) {
+				for (var s in ial_db[box][i].secondary) {
+					if (ial_db[box][i].secondary[s].
+							indexOf(query) != -1) {
+						match_list[1].push(
+							ial_db[box][i]);
+						break;
+					}
+				}
+			}
+		}
+	}
+
+	var rslt = "";
+	var have_results = 0;
+	for (var i in match_list) {
+		for (var j in match_list[i]) {
+			rslt += "<li><a href=\"" + match_list[i][j].link + "\"";
+			if (have_results == 0)
+				rslt += " class=\"selected\"";
+			rslt += ">" + match_list[i][j].title + "</a></li>";
+			have_results++;
+			if (have_results > limit)
+				break;
+		}
+		if (have_results > limit)
+			break;
+	}
+
+	document.getElementById("results_" + box).innerHTML = rslt;
+}
+
+function ial_keyboard_input(box, event) {
+	if (event == null) {
+		ial_update_search(box);
+	} else {
+		switch(event.keyCode) {
+		case 27: // ESCAPE
+			ial_normal_mode();
+			break;
+		case 38: // UP
+			ial_select_different_element(
+						e => e.previousElementSibling);
+			break;
+		case 40: // DOWN
+			ial_select_different_element(e => e.nextElementSibling);
+			break;
+		default:
+			ial_update_search(box);
+		}
+	}
+}
+
+function ial_enter(box) {
+	if (box == "google") {
+		var query = document.getElementById("google").value;
+		var pos;
+		var append = "";
+		if ((pos = query.indexOf(':')) != -1) {
+			var prefix = query.substring(0, pos);
+			var replace = false;
+			if (prefix == "img") {
+				append = "&site=imghp&tbm=isch";
+				query = query.substring(pos + 1);
+			}
+		}
+		window.open("https://www.google.com/search?q=" +
+					encodeURIComponent(query) + append);
+		document.getElementById("google").value = "";
+	} else {
+		var link = document.getElementById("results_" +
+					box).querySelectorAll("a.selected")[0];
+		if (link != undefined) {
+			window.open(link.getAttribute("href"));
+			document.getElementById("in_search_" + box).value = "";
+		}
+	}
+	return void(0);
+}
+
+function ial_insert_mode(from_box) {
+	document.getElementById("mode").innerHTML = "INSERT";
+	if (from_box == "doc" || from_box == "abx")
+		ial_select_different_box(ial_func_select_defined_box(from_box));
+}
+
+function ial_func_select_defined_box(lbl) {
+	var box = document.getElementById("box_" + lbl);
+	return (pbx) => { return (box === pbx) ? undefined : box }
+}
+
+function ial_normal_mode() {
+	document.getElementById("mode").innerHTML = "NORMAL";
+}
+
+/* ]]> */
+</script>
+
+<!-- ***************************************************************************
+********************************************************************************
+********************************************************************************
+******                                                                    ****** 
+******                                                                    ****** 
+******        H T M L   H E A D E R                                       ****** 
+******                                                                    ****** 
+******                                                                    ****** 
+********************************************************************************
+********************************************************************************
+**************************************************************************** -->
+</head>
+<body>
+	<div id="header">
+		<div id="first">
+			<h1>IAL 1.6.0</h1>
+			<form method="post"
+			action="javascript:ial_enter('google');">
+				<input type="text" id="google"
+					onfocus="ial_insert_mode('google');"
+					onfocusout="ial_normal_mode();"/>
+			</form>
+			<div id="mode">INITIALIZING</div>
+		</div>
+		<div id="logo">
+
+<svg height="80px" width="480px" xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 480 80" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<linearGradient id="randverlauf" x1="0%" y1="0%" x2="0%"
+					y2="100%" spreadMethod="reflect">
+			<stop offset="0%"
+				style="stop-color:#660000;stop-opacity:1;"/>
+			<stop offset="50%"
+				style="stop-color:#ff8888;stop-opacity:1;"/>
+			<stop offset="100%"
+				style="stop-color:#660000;stop-opacity:1;"/>
+		</linearGradient>
+		<linearGradient id="rohrverlauf" x1="0%" y1="0%" x2="0%"
+					y2="100%" spreadMethod="reflect">
+			<stop offset="0%"
+				style="stop-color:#cc6600;stop-opacity:1;"/>
+			<stop offset="50%"
+				style="stop-color:#ffaa55;stop-opacity:1;"/>
+			<stop offset="100%"
+				style="stop-color:#cc6600;stop-opacity:1;"/>
+		</linearGradient>
+		<linearGradient id="textverlauf" x1="0%" y1="15%" x2="0%"
+					y2="100%" spreadMethod="reflect">
+			<stop offset="0%"
+				style="stop-color:#110000;stop-opacity:1;"/>
+			<stop offset="50%"
+				style="stop-color:#ff0000;stop-opacity:1;"/>
+			<stop offset="100%"
+				style="stop-color:#ff8888;stop-opacity:1;"/>
+		</linearGradient>
+	</defs>
+
+	<rect x="0" y="0" width="480px" height="80px" fill="url(#randverlauf)"/>
+	<rect x="5" y="5" width="470px" height="70px" fill="#500000"/>
+
+	<rect x="10" y="7" height="64" width="64" fill="#000000"/>
+	<rect x="18" y="15" height="19" width="48" fill="#c100f6"/>
+	<rect x="18" y="43" height="19" width="48" fill="#ffff00"/>
+	<text x="17" y="56" fill="#ff0000" style="font-family:'DejaVu Sans',
+				sans-serif;font-weight:bold;font-size:50px;
+				stroke-width:2px;stroke:#000000;">M</text>
+
+	<text x="80" y="35" fill="url(#textverlauf)" style="font-weight:bolder;
+				font-family:'Arial Black','DejaVu Sans',
+				sans-serif;font-size:35px;stroke:#ffffff;
+				stroke-width:2px;">Ma_Sys.ma</text>
+
+	<rect x="80" y="45" width="200px" height="20px" rx="10" ry="10"
+			style="fill:#8b0000;stroke-width:2px;stroke:#770000;"/> 
+	<rect x="80" y="45" width="30px" height="20px" rx="10" ry="10" id="anm"
+						fill="url(#rohrverlauf)">
+		<animateMotion path="M0 0 L170 0" dur="15s" restart="always"
+						repeatCount="indefinite">
+			<!--
+				Ohne das gibt es einen Validierfehler, aber mit
+				ihm funktioniert es nicht.
+				<mpath xlink:href="#anm"/>
+			-->
+		</animateMotion>
+	</rect>
+
+	<text x="80" y="75" fill="#ff0000" style="font-family:sans-serif;
+					font-size:9px;stroke-width:0px;">
+		Copyright (c) Ma_Sys.ma, for further info send an e-mail to
+		info@masysma.net.
+	</text>
+</svg>
+		</div>
+		<div id="copyright">
+			Information and Links
+			(c) 2023 Ma_Sys.ma &lt;<a href="mailto:info@masysma.net"
+						>info@masysma.net</a>&gt;
+		</div>
+		<xi:include href="primary.xml"/>
+	</div>
+	<hr/>
+
+	<div id="all_boxes">
+
+		<div class="box" id="box_doc">
+			<h2>a: Docs</h2>
+			<div class="search_config" id="enable_doc"> </div>
+			<hr/>
+			<form method="post"
+					action="javascript:ial_enter('doc');">
+				<input type="text" id="in_search_doc"
+				onkeyup="ial_keyboard_input('doc', event);"
+				onfocus="ial_insert_mode('doc');"
+				onfocusout="ial_normal_mode();"/>
+			</form>
+			<ul id="results_doc"> </ul>
+		</div>
+
+		<div class="box" id="box_abx">
+			<h2>o: Archivebox</h2>
+			<div class="search_config" id="enable_abx"> </div>
+			<hr/>
+			<form method="post"
+					action="javascript:ial_enter('abx');">
+				<input type="text" id="in_search_abx"
+				onkeyup="ial_keyboard_input('abx', event);"
+				onfocus="ial_insert_mode('abx');"
+				onfocusout="ial_normal_mode();"/>
+			</form>
+			<ul id="results_abx"> </ul>
+		</div>
+
+<!-- ***************************************************************************
+********************************************************************************
+********************************************************************************
+******                                                                    ****** 
+******                                                                    ****** 
+******        C U S T O M   X H T M L   B L O C K S                       ****** 
+******                                                                    ****** 
+******                                                                    ****** 
+********************************************************************************
+********************************************************************************
+**************************************************************************** -->
+
+	<xi:include href="boxes.xml"/>
+
+<!-- ***************************************************************************
+********************************************************************************
+********************************************************************************
+******                                                                    ****** 
+******                                                                    ****** 
+******        S C R I P T   L O A D   A N D   I N V O C A T I O N         ****** 
+******                                                                    ****** 
+******                                                                    ****** 
+********************************************************************************
+********************************************************************************
+**************************************************************************** -->
+		<hr/>
+	</div>
+
+	<xi:include href="scripts.xml"/>
+
+	<script type="text/javascript">ial_ready();</script> <!-- run at end -->
+</body>
+</html>
