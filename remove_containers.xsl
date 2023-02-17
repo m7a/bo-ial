@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="windows-1250" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 	https://stackoverflow.com/questions/29298507/xmlstarlet-xinclude-xslt
 	xmlstarlet tr __xinclude remove_containers.xml.xsl index.xhtml > out.xhtml

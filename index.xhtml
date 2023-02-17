@@ -120,13 +120,11 @@ var ial_db = {
 };
 
 function ial_add_data(list) {
-	for (var i in list) {
+	for (var i in list)
 		if (ial_db[list[i].box] != undefined &&
 					ial_db[list[i].box] instanceof Array)
 			ial_db[list[i].box].push(list[i]);
-		else
-			alert("Invalid entry: " + JSON.stringify(list[i]));
-	}
+		// allow invalid elements to put "end mark objects" in lists
 }
 
 function ial_keypress_all(event) {
@@ -251,7 +249,7 @@ function ial_toggle(box, id) {
 
 function ial_update_search(box) {
 	var query = document.getElementById("in_search_" + box).value;
-	var limit = 100;
+	var limit = 16;
 
 	var ids_enabled = {};
 	var edb = document.getElementById("enable_" + box).firstElementChild;
@@ -292,10 +290,12 @@ function ial_update_search(box) {
 	var have_results = 0;
 	for (var i in match_list) {
 		for (var j in match_list[i]) {
-			rslt += "<li><a href=\"" + match_list[i][j].link + "\"";
+			rslt += "<li><a href=\"" + htmlspecialchars(
+						match_list[i][j].link) + "\"";
 			if (have_results == 0)
 				rslt += " class=\"selected\"";
-			rslt += ">" + match_list[i][j].title + "</a></li>";
+			rslt += ">" + htmlspecialchars(match_list[i][j].title) +
+								"</a></li>";
 			have_results++;
 			if (have_results > limit)
 				break;
@@ -305,6 +305,13 @@ function ial_update_search(box) {
 	}
 
 	document.getElementById("results_" + box).innerHTML = rslt;
+}
+
+// https://stackoverflow.com/questions/1787322
+function htmlspecialchars(text) {
+	var map = { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;",
+								"'": '&apos;' };
+	return text.replace(/[&<>"']/g, m => map[m]);
 }
 
 function ial_keyboard_input(box, event) {
