@@ -42,6 +42,7 @@
 		.search_config a.regular:visited,
 		.search_config a.regular:active
 		            { color: #e5e5e5; }
+		a:hover     { color: #ffffff; }
 
 		.box        { margin-top: 1em; margin-left: 2ex;
 				padding-top: 0.5em; padding-bottom: 0.5em;
@@ -92,6 +93,8 @@
 
 		#mode       { font-weight: bold; }
 		#all_boxes  { background-color: #000000; }
+		#primary_links img
+		            { height: 32px; background-color: white; }
 
 		/* TODO DOES NOT WORK? */
 		#first input:before
@@ -249,7 +252,7 @@ function ial_toggle(box, id) {
 
 function ial_update_search(box) {
 	var query = document.getElementById("in_search_" + box).value;
-	var limit = 16;
+	var limit = 15;
 
 	var ids_enabled = {};
 	var edb = document.getElementById("enable_" + box).firstElementChild;
@@ -500,7 +503,7 @@ function ial_normal_mode() {
 		</div>
 
 		<div class="box" id="box_abx">
-			<h2>o: Archivebox</h2>
+			<h2>o: Archive</h2>
 			<div class="search_config" id="enable_abx"> </div>
 			<hr/>
 			<form method="post"
