@@ -1,0 +1,9 @@
+[Unit]
+Description=Ma_Sys.ma IAL Update
+
+[Service]
+Type=oneshot
+ExecStart=make -C /data/main/130_archivebox/ial
+
+[Install]
+WantedBy=default.target
