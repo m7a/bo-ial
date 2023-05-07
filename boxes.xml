@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- boxes.xml -->
+<masysma:boxes xmlns:masysma="https://masysma.net/32/ial.xhtml"
+					xmlns="http://www.w3.org/1999/xhtml">
+<div class="box">
+	<h2>Ma_Sys.ma Links</h2>
+	<hr/>
+	<ul>
+		<li><a href="https://masysma.net">masysma.net</a></li>
+		<li><a href="https://github.com/m7a">github.com</a></li>
+		<li><a href="https://gitlab.com/masysma">gitlab.com</a></li>
+		<li><a href="https://stackoverflow.com/users/11959417/linux-fan">stackoverflow.com</a></li>
+	</ul>
+	<ul>
+		<li><a href="https://news.ycombinator.com/from?site=masysma.net">hn masysma.net</a></li>
+		<li><a href="https://www.reddit.com/search/?q=site%3Amasysma.net">reddit masysma.net</a></li>
+		<li><a href="https://yellowlab.tools/result/gh3o7ao6bg">Yellowlab Pagespeed</a></li>
+	</ul>
+</div>
+
+<div class="box">
+	<h2>Webtools</h2>
+	<hr/>
+	<ul>
+		<li><a href="https://geographiclib.sourceforge.io/cgi-bin/GeoConvert">MGRS https://is.gd/utmmgrs</a></li>
+		<li><a href="https://www.koordinaten-umrechner.de/decimal/51.000000,10.000000?karte=OpenStreetMap&amp;zoom=8">Koordinaten-Umrechner GUI</a></li>
+		<li><a href="https://is.gd/index.php">is.gd</a></li>
+		<li><a href="https://hashtoolkit.com/">MD5 Red</a></li>
+		<li><a href="https://detexify.kirelabs.org/classify.html">Detexify LaTeX Symbol</a></li>
+		<li><a href="https://www.gls-pakete.de/sendungsverfolgung">GLS Tracking</a></li>
+		<li><a href="https://www.timeanddate.de/datum/arbeitstage-zaehler?d1=01&amp;m1=09&amp;y1=2018&amp;d2=12&amp;m2=10&amp;y2=2018&amp;ti=on&amp;ach=3">Arbeitstagezähler</a></li>
+	</ul>
+	<ul>
+		<li><a href="https://www.ean-search.org/">EAN Search</a></li>
+		<li><a href="https://www.blocklayer.com/graph-paper">Printable Graph Paper</a></li>
+		<li><a href="https://incompetech.com/graphpaper/weightedgrid/">Free Online Graph Paper</a></li>
+		<li><a href="https://myapps.taec.toshiba.com/myapps/admin/jsp/webrma/addRequest1NoLogin.jsp?Action=NEW">TOSHIBA Check Warranty</a></li>
+		<li><a href="https://cryptii.com/pipes/Tt2AJQ">Integer Encoder</a></li>
+		<li><a href="https://www.bryanbraun.com/after-dark-css/">Screensavers</a></li>
+		<li><a href="https://gcc.godbolt.org/">GCC Godbolt</a></li>
+		<li><a href="https://www.thistothat.com/index.shtml">This to That (Glue Advice)</a></li>
+	</ul>
+</div>
+</masysma:boxes>

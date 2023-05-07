@@ -74,4 +74,4 @@ file_put_contents("ada/script.js", "ial_add_data(".json_encode($ramdb,
 						JSON_PRETTY_PRINT).");");
 ?>
 
-<script type="text/javascript" href="ada/script.js">
+<script type="text/javascript" href="ada/script.js"></script>

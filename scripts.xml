@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- scripts.xml -->
+<masysma:scripts xmlns:masysma="https://masysma.net/32/ial.xhtml"
+					xmlns="http://www.w3.org/1999/xhtml">
+	<script type="text/javascript" src="ant/script.js"></script>
+	<script type="text/javascript" src="erlang/script.js"></script>
+	<script type="text/javascript" src="java/script.js"></script>
+	<script type="text/javascript" src="php/script.js"></script>
+	<script type="text/javascript" src="posix/script.js"></script>
+</masysma:scripts>
