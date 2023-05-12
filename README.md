@@ -9,7 +9,6 @@ keywords: ["ial", "d5man2", "information", "links", "documentation", "offline"]
 x-masysma-version: 1.6.x
 x-masysma-website: https://masysma.net/32/ial.xhtml
 x-masysma-repository: https://www.github.com/m7a/bo-ial
-x-masysma-owned: 1
 x-masysma-copyright: (c) 2023 Ma_Sys.ma <info@masysma.net>
 ---
 Introduction
@@ -21,24 +20,24 @@ and other URLs can then be linked from a single home page.
 
 This can be a more structured approach than having tons of bookmarks or
 searching documentation online all of the time. Since IAL consists of files
-external to the web browser, it can be synchronized across devices and
-browsers. It is also possible to serve it through a web server in order to
-locally host commonly needed API documentation and links.
+external to the web browser, its contents can be synchronized across devices and
+browsers. It is also possible to host it on a web server in order to locally
+provide commonly needed API documentation and links.
 
 IAL consists of two main components:
 
  1. _XHTML Template_:
     A page template is provided that can be used as a “homepage” for all the
-    documentation collected. The page consists of multiple search boxes
+    collected documentation. The page consists of multiple search boxes
     (for Internet and local searches respectively) and “boxes” into which links
     can be placed. These links can point to local documentation or websites.
  2. _Scripts_:
     Scrips are provided for downloading API documentations from the respective
     vendors as HTML files that can be stored locally. Additionally, the scripts
-    contain code to extract relevant keywords from the downloaded HTML and
-    add links to those keywords to a JSON file (`script.js`) that can then be
-    included from the homepage in order to enable a keyword-based search from
-    the homepage.
+    contain code to extract relevant keywords from the downloaded HTML. These
+    keywords are then stored in a JSON file (`script.js`) along with links to
+    the respective matching pages. Including these `script.js` files from the
+    IAL home page enables a keyword-based search to search the documentation.
 
 The idea is that these components provide a framework that users can take as
 an example that can be customized to fit their own uses.
@@ -73,29 +72,29 @@ using Windows.
 
 	xmlstarlet tr --xinclude remove_containers.xsl index.xhtml > index_with_includes_resolved.xhtml
 
- 4. Open page `index_with_includes_resolved.xhtml` in a Webbrowser to show the
+ 4. Open page `index_with_includes_resolved.xhtml` in a web browser to show the
     example IAL page.
 
 ![Result of performing the steps as described -- a minimal working IAL 1.6 instance](ial_att/scr_example.png)
 
 As you can see in the screenshots, the icons are not automatically provided by
 the scripts. If you want them to display correctly, you need to download them
-from external sources.
+from external sources like e. g. Wikipedia or the sources' homepages.
 
 The XHTML Template for IAL 1.6
 ==============================
 
 The XHTML page template can be found in file `index.xhtml` in the repository.
-It consists of a page structure, stylesheet and script and contains
+It consists of a page structure, stylesheet and script. The template contains
 XInclude links to files `primary.xml`, `boxes.xml` and `scripts.xml`.
 
 The idea behind these separate files is to separate presentation and contents,
 The `index.xhtml` template can be left unmodified for a consistent presentation
 and all the contents can be supplied through the three external XML files.
-Web browsers do not normally resolve the XInclude directives. Hence in order to
-make use of the template, the XInclude links need to be resolved. To do this,
-an XML tool like e.g. `xmlstarlet` can be used e.g. as shown under
-_Instantiate the template_ above.
+Web browsers and servers do not normally resolve the XInclude directives. Hence
+in order to make use of the template, the XInclude links need to be resolved
+explicitly. To do this, a dedicated XML tool like e.g. `xmlstarlet` can be used
+e. g. as shown under _Instantiate the template_ above.
 
 Users are of course free to modify the template directly and need not make use
 of the XInclude structure proposed here. It is possible to directly include
@@ -110,7 +109,7 @@ pieces of documentation. The template expects there to be a list of links
 with icons, but users are of course free to deviate.
 
 If one were to link Ant, Erlang, Java, PHP and POSIX pages from this
-file, the associated `primary.xml` could e.g. look as follows:
+file, the associated `primary.xml` could e. g. look as follows:
 
 ~~~xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -126,7 +125,7 @@ file, the associated `primary.xml` could e.g. look as follows:
 
 ## `boxes.xml` -- Link Collections in Boxes
 
-To be a useful homepage, IAL tries to crunch as many links on the space as
+To be a useful homepage, IAL tries to crunch as many links into the space as
 reasonable. To achieve some structure, it allows categorizing the links into
 _boxes_. The structuring of the boxes is entirely left to the user. By default,
 IAL expects the boxes to contain a title as `<h2>` tag and links in unsorted
@@ -242,8 +241,8 @@ If you are using an extension like Vimium, VimFX or such to provide VIM-style
 keybindings for the web browser, it may be sensible to disable them for the
 IAL page since it implements its own (likely conflicting) keyboard navigation.
 
-The Scripts
-===========
+Scripts
+=======
 
 The scripts are used to download pieces of information and generate `script.js`
 files containing the relevant metadata in a format that IAL can use. The typical
@@ -278,19 +277,20 @@ copies of (single) websites. To this end it serves a similar function like IAL,
 albeit with a different focus.
 
 Both of the tools can be integrated because the script `pages_archivebox.sql`
-(which is a Shell script and an SQL script in a single file!) can be used to
-read ArchiveBox' database and create a suitable `script.js` for inclusion into
-IAL.
+can be used to read ArchiveBox' database and create a suitable `script.js` for
+inclusion into IAL. The script is a polyglot that can be either used as a
+query against the database or executed from the shell in order to invoke this
+query in a given archivebox database.
 
-The “Archive” box can then be used to search within the Archivebox links and
-[ENTER] leads to the page as captured in Archivebox.
+The “Archive” box in IAL can then be used to search within the Archivebox links
+and [ENTER] leads to the page as captured in Archivebox.
 
 The URL to prepend to Archivebox links is currently hardcoded to
 `http://127.0.0.1:7994/archive` but can be changed in `pages_archivebox.sql`
 as needed.
 
 Additionally, the integration supports certain tags to be present in the
-Archivebox archive and assigns them different “priorities”. This is necessary
+Archivebox archive and assigns different “priorities” to them. This is necessary
 since IAL only supports a single category per entry whereas Archivebox entries
 can have any number of tags. The tag with the lowest priority is assigned as
 category when viewed in IAL (other tags are discarded).
@@ -318,6 +318,10 @@ Tag        Description
 `gam`      entries about games
 `dcf77`    entries about clocks
 `book`     entries about books or containing the content of a book
+
+Users can either make use of these tags or define their own priorities in the
+script in order to declare which of the archivebox results should appear under
+their on category in IAL.
 
 Data Format of `script.js`
 ==========================
@@ -413,3 +417,11 @@ index.xhtml: tpl.xhtml $(IAL_SRC)/remove_containers.xsl
 tpl.xhtml: $(IAL_SRC)/index.xhtml
 	cp $< $@
 ~~~
+
+License
+=======
+
+Since meaningful IAL deployments are likely to mix proprietary data with the
+repository contents, IAL is released under a permissive CC0-1.0 license except
+for the Ma_Sys.ma logo and icon. See `LICENSE.txt` for the CC0-1.0 license
+information.
