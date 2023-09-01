@@ -42,6 +42,13 @@ IAL consists of two main components:
 The idea is that these components provide a framework that users can take as
 an example that can be customized to fit their own uses.
 
+## Alternatives
+
+As documentation is often available online, there is less and less need for
+the functionality provided by _Information and Links_. A software that also
+focuses on offlince documentation searching can be found at
+<https://zealdocs.org/>.
+
 Getting Started with the Example Content
 ========================================
 
@@ -56,28 +63,34 @@ using Windows.
 
  1. Clone the `co-artifact` repository and the `bo-ial` repository.
 
-	git clone https://github.com/m7a/bo-ial.git
-	git clone https://github.com/m7a/co-maartifact.git
-	cd bo-ial
+~~~
+git clone https://github.com/m7a/bo-ial.git
+git clone https://github.com/m7a/co-maartifact.git
+cd bo-ial
+~~~
 
  2. Download some documentation
 
-	./pages_ant.sh      # requires a Debian-based OS, skip if not available
-	./pages_erlang.sh
-	./pages_java.sh     # requires a Debian-based OS, skip if not available
-	./pages_php.sh
-	./pages_posix.sh
+~~~bash
+./pages_ant.sh      # requires a Debian-based OS, skip if not available
+./pages_erlang.sh
+./pages_java.sh     # requires a Debian-based OS, skip if not available
+./pages_php.sh
+./pages_posix.sh
+~~~
 
  3. Instantiate the template
 
-	xmlstarlet tr --xinclude remove_containers.xsl index.xhtml > index_with_includes_resolved.xhtml
+~~~
+xmlstarlet tr --xinclude remove_containers.xsl index.xhtml > index_with_includes_resolved.xhtml
+~~~
 
  4. Open page `index_with_includes_resolved.xhtml` in a web browser to show the
     example IAL page.
 
 ![Result of performing the steps as described -- a minimal working IAL 1.6 instance](ial_att/scr_example.png)
 
-As you can see in the screenshots, the icons are not automatically provided by
+As you can see in the screenshot, the icons are not automatically provided by
 the scripts. If you want them to display correctly, you need to download them
 from external sources like e. g. Wikipedia or the sources' homepages.
 
