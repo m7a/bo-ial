@@ -2,9 +2,8 @@
 
 target=posix
 
-#! [ -d "$target" ] || rm -r "$target"
-#mkdir -p "$target"
-
+! [ -d "$target" ] || rm -r "$target"
+mkdir -p "$target"
 [ -n "${MDVL_CI_PHOENIX_ROOT:-}" ] || MDVL_CI_PHOENIX_ROOT="$(cd \
 						"$(dirname "$0")/.." && pwd)"
 archive="$MDVL_CI_PHOENIX_ROOT/x-artifacts/posix-2024.tar.gz"
@@ -17,13 +16,15 @@ else
 	# using-wget-to-recursively-fetch-a-directory-with-arbitrary-files-in-it
 	# /65442746#65442746
 	url=https://pubs.opengroup.org/onlinepubs/9799919799
+	# it seems this command commonly fails with an error code despite
+	# working quite well. ignore the return code for now...
 	wget --recursive --no-parent --random-wait --wait 2 \
 			--no-http-keep-alive --no-host-directories --level=inf \
 			--accept '*' --reject="index.html?*" --cut-dirs=2 \
 			--page-requisites --relative \
 		"$url"/ "$url"/Figures/ "$url"/frontmatter/ "$url"/help/ \
 			"$url"/images/ "$url"/jscript/ "$url"/basedefs/ \
-			"$url"/functions/ "$url"/utilities/ "$url"/xrat/
+			"$url"/functions/ "$url"/utilities/ "$url"/xrat/ || true
 	cd ..
 	tar -c 2024 | gzip -9 > "$archive"
 	cd ..
